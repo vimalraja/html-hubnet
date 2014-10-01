@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<title>Hubnet :: Edit Profile</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+  <header class="header"> <a href="#"><img src="images/logo-hubnet.jpg" width="165" height="35" alt="logo"></a>
+    <div class="pull-right">
+      <div class="searchWrap clearfix">
+        <div class="searchOptions">
+        	<img src="images/icon-searchbar.png" alt="Search options"> 
+            
+        </div>
+        <input type="search" class="inputSearch" placeholder="Search for files, content, people, tags...">
+        <button class="btn-search"><img src="images/icon-search.png" width="18" height="18" alt="Search"></button>
+      </div>
+      <div class="userProfile">
+        <div class="profilePic"><img src="images/img-user-maria.jpg" width="30" height="30" alt="Maria"></div>
+        <div class="userSettings"><a href="#" class="greetings">Hi <span class="userName">Maria</span></a></div>
+      </div>
+    </div>
+  </header>
+  <div class="containerfluid clearfix">
+    <aside class="sidebar">
+      <ul class="menu">
+        <li class="desktopOnly">
+          <h3>DASHBOARD</h3>
+        </li>
+        <li class="firstMobileChild"><a href="#"><span class="icon icove"></span><span class="desktopOnly">Overview</span></a></li>
+        <li><a href="#"><span class="icon icnot"></span><span class="desktopOnly">Notifications</span></a><span class="unreadAlerts">5</span></li>
+        <li><a href="#"><span class="icon icmes"></span><span class="desktopOnly">Messages</span></a><span class="unreadAlerts">2</span></li>
+        <li class="desktopOnly">
+          <h3>HUBS</h3>
+        </li>
+        <li><a href="#"><span class="icon ictas"></span><span class="desktopOnly">Tasks</span></a></li>
+        <li><a href="#"><span class="icon icsta"></span><span class="desktopOnly">Statistics</span></a></li>
+        <li><a href="#"><span class="icon icsal"></span><span class="desktopOnly">Sales</span></a></li>
+        <li class="desktopOnly">
+          <h3>CONTENT</h3>
+        </li>
+        <li><a href="#"><span class="icon icwri"></span><span class="desktopOnly">Write</span></a></li>
+        <li><a href="#"><span class="icon icwik"></span><span class="desktopOnly">Wiki</span></a></li>
+        <li><a href="#"><span class="icon icsho"></span><span class="desktopOnly">Show</span></a></li>
+        <li><a href="#"><span class="icon iceve"></span><span class="desktopOnly">Event Calendar</span></a></li>
+        <li class="desktopOnly">
+          <h3>OVERVIEW</h3>
+        </li>
+        <li class="active"><a href="#"><span class="icon icmai"></span><span class="desktopOnly">Main Settings</span></a></li>
+        <li><a href="#"><span class="icon iccon"></span><span class="desktopOnly">Configurations</span></a></li>
+        <li><a href="#"><span class="icon icpeo"></span><span class="desktopOnly">People Directory</span></a></li>
+        <li><a href="#"><span class="icon icadm"></span><span class="desktopOnly">Admin</span></a></li>
+      </ul>
+    </aside>
+    <section class="section hubnetDashboard">
+      <div class="dashboardHeader">
+        <div class="featuredBanner"></div>
+        <div class="breadcrumb">Main Settings > Profile</div>
+      </div>
+      <div class="dashboardContents">
+      <div class="pageWidget viewFiles">
+        <div class="whead">
+          <h4>Profile</h4>
+        </div>
+        <div class="wbody">
+          <div class="mainSettings">
+            <ul class="tabMenu">
+              <li class="tabProfile"><a href="profile.html" class="active"><span class="icontabs icProfile"></span><span class="menuText">My Profile</span></a></li>
+              <li class="tabNetwork"><a href="mynetwork.html"><span class="icontabs icNetwork"></span><span class="menuText">My Network</span></a></li>
+              <li class="tabHub"><a href="myhubs.html"><span class="icontabs icHub"></span><span class="menuText">My Hubs</span></a></li>
+              <li class="tabMedia"><a href="mymedia.html"><span class="icontabs icMedia"></span><span class="menuText">My Media</span></a></li>
+            </ul>
+            <div class="tabProfileContent clearfix">
+              <div class="laside">
+                <div class="pageControls"><button class="btnBlue">Save</button><button class="btnGrey">Cancel</button></div>
+                <div class="greyBox userProfileDetails">
+                    <div class="row">
+                    <div class="userTitle">
+                    <h3>Maria Smith</h3>
+                    </div>
+                    <div class="row">
+                    	<div class="tdCol01">
+                        	<div class="columnLeft"><span class="strong">Title</span></div>
+                            <div class="columnRight"><input type="text" placeholder="Financial Advisor"></div>
+                        </div>
+                        <div class="tdCol02">
+                        	<div class="columnLeft"><span class="strong">Department</span></div>
+                            <div class="columnRight"><input type="text" placeholder="Finance"></div>
+                        </div>
+                    </div>
+                    <div class="row longFill">
+                        <div class="columnLeft"><span class="userAddress strong">Address:</span></div>
+                        <div class="columnRight"><input type="text" placeholder="123 South hubnet Drive, Chicago, IL 60625"></div>
+                    </div>
+                    <div class="row">
+                    	<div class="tdCol01">
+                        	<div class="columnLeft"><span class="userMail strong">Business</span></div>
+                            <div class="columnRight"><input type="text" placeholder="test@testmail.com"></div>
+                        </div>
+                        <div class="tdCol02">
+                        	<div class="columnLeft"><span class="userMail strong">Personal:</span></div>
+                            <div class="columnRight"><input type="text" placeholder="personal@test.com"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                    	<div class="tdCol01">
+                        	<div class="columnLeft"><span class="userContact strong">Phone: </span></div>
+                            <div class="columnRight"><input type="text" placeholder="773-456-7914"></div>
+                        </div>
+                        <div class="tdCol02">
+                        	<div class="columnLeft"><span class="userContactAlt strong">Alternate:</span></div>
+                            <div class="columnRight"><input type="text" placeholder="773-456-7925"></div>
+                        </div>
+                    </div>
+                    <div class="row longFill social">
+                        <div class="columnLeft"><span class="twitter strong">Twitter:</span></div>
+                        <div class="columnRight"><input type="text" placeholder="www.twitter.com/lorem_ipsum"></div>
+                    </div>
+                     <div class="row longFill social">
+                        <div class="columnLeft"><span class="facebook strong">Facebook:</span></div>
+                        <div class="columnRight"><input type="text" placeholder="www.facebook.com/lorem_ipsum"></div>
+                    </div>
+                     <div class="row longFill social">
+                        <div class="columnLeft"><span class="skype strong">Skype:</span></div>
+                        <div class="columnRight"><input type="text" placeholder="Lorem_ipsum"></div>
+                    </div>
+                     <div class="row longFill social">
+                        <div class="columnLeft"><span class="blog strong">Blog:</span></div>
+                        <div class="columnRight"><input type="text" placeholder="www.myhomepage.com"></div>
+                    </div>
+                </div>
+                <div class="moreUserDetails">
+                	
+                  <h3>About Me</h3>
+                  <div class="colmd6 alpha">
+                  <h4>Job Description and Responsibilities:</h4>
+                  <p><textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat lectus arcu, in ultricies ligula dignissim eleifend. Ut rhoncus, dolor vitae tristique accumsan, ligula enim consequat massa, non sagittis arcu enim id enim. Aenean ac fringilla nibh. Phasellus in aliquam ipsum. Maecenas eleifend eu diam a finibus.</textarea></p>
+                  </div>
+                  <div class="colmd6 omega">
+                  <h4>Skillset: </h4>
+                  <p><textarea>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis placerat lectus arcu, in ultricies ligula dignissim eleifend. Ut rhoncus, dolor vitae tristique accumsan.</textarea></p>
+                  </div>
+                  
+                  <div class="colmd6 alpha">
+                  <h4>Background:</h4>
+                  <p><textarea>Praesent ante massa, ullamcorper vitae luctus ut, finibus sed magna. Etiam quam ut orci vestibulum mattis. In nec varius leo, in lacinia ipsum. Morbi efficitur elit viverra pharetra.</textarea></p>
+                  </div>
+                  <div class="colmd6 omega">
+                  <h4>What you should know about me: </h4>
+                  <p><textarea>Etiam fringilla quam ut orci vestibulum mattis. In nec varius leo, in lacinia ipsum. Morbi efficitur elit hendrerit viverra pharetra.</textarea></p>
+                </div>
+                </div>
+              </div>
+                </div>
+              <!-- /.laside -->
+              <div class="raside">
+                <div class="myProfileBlock">
+                  <div class="profilePicture"><img src="images/myProfileImage.png" alt="My Profile Image"><a href="#" class="changeProfilePic active">Change Profile Picture</a></div>
+                  <ul class="profileMedals">
+                    <li><a href="#"><span class="iconMedal gold"></span><span class="medalText">12 Gold</span></a></li>
+                    <li><a href="#"><span class="iconMedal silver"></span><span class="medalText">3 Silver</span></a></li>
+                    <li><a href="#"><span class="iconMedal bronze"></span><span class="medalText">3 Bronze</span></a></li>
+                  </ul>
+                  <div class="profileGreetings"> <a href="#"><span class="iconRecord"></span>Record a New Greeting</a> </div>
+                </div>
+                <div class="otherInterest">
+                  <div class="favMoviesSec">
+                    <h4>Favorite Movies</h4>
+                    <p><textarea>Gone with the wind, Casablanca, In nec varius leo, In lacinia ipsum.</textarea></p>
+                  </div>
+                  <div class="hobbiesSec">
+                    <h4>Hobbies</h4>
+                    <p><textarea>Etiam fringilla quam ut orci vestibulum mattis. In nec varius leo, in lacinia ipsum.</textarea></p>
+                  </div>
+                  <div class="interestsSec">
+                    <h4>Interests</h4>
+                    <p><textarea>Etiam fringilla quam ut orci vestibulum mattis. In nec varius leo, in lacinia ipsum. Morbi efficitur elit hendrerit viverra pharetra.</textarea></p>
+                  </div>
+                </div>
+              </div>
+              <!-- /.raside --> 
+            </div>
+          </div>
+        </div>
+        <!-- .//wbody --> 
+        
+      </div>
+      <!-- /. dashboard contents --> 
+    </section>
+  </div>
+</div>
+</body>
+</html>

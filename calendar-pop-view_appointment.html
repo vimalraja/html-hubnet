@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+<title>Hubnet :: Calendar - view appointment pop</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="favicon.png">
+<link href='fullcalendar.css' rel='stylesheet' />
+<link href='fullcalendar.print.css' rel='stylesheet' media='print' />
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="page">
+  <header class="header"> <a href="#"><img src="images/logo-hubnet.jpg" width="165" height="35" alt="logo"></a>
+    <div class="pull-right">
+      <div class="searchWrap clearfix">
+        <div class="searchOptions"> <img src="images/icon-searchbar.png" alt="Search options"> </div>
+        <input type="search" class="inputSearch" placeholder="Search for files, content, people, tags...">
+        <button class="btn-search"><img src="images/icon-search.png" width="18" height="18" alt="Search"></button>
+      </div>
+      <div class="userProfile">
+        <div class="profilePic"><img src="images/img-user-maria.jpg" width="30" height="30" alt="Maria"></div>
+        <div class="userSettings"><a href="#" class="greetings">Hi <span class="userName">Maria</span></a></div>
+      </div>
+    </div>
+  </header>
+  <div class="containerfluid clearfix">
+    <aside class="sidebar">
+      <ul class="menu">
+        <li class="desktopOnly">
+          <h3>DASHBOARD</h3>
+        </li>
+        <li class="firstMobileChild"><a href="#"><span class="icon icove"></span><span class="desktopOnly">System Widgets</span></a></li>
+        <li class="active"><a href="#"><span class="icon iceve"></span><span class="desktopOnly">My Calendar</span></a></li>
+        <li><a href="#"><span class="icon icnot"></span><span class="desktopOnly">Notifications</span></a><span class="unreadAlerts">5</span></li>
+        <li><a href="#"><span class="icon icmes"></span><span class="desktopOnly">Messages</span></a><span class="unreadAlerts">2</span></li>
+        <li class="desktopOnly">
+          <h3>HUBS</h3>
+        </li>
+        <li><a href="#"><span class="icon ictas"></span><span class="desktopOnly">Tasks</span></a></li>
+        <li><a href="#"><span class="icon icsta"></span><span class="desktopOnly">Statistics</span></a></li>
+        <li><a href="#"><span class="icon icsal"></span><span class="desktopOnly">Sales</span></a></li>
+        <li class="desktopOnly">
+          <h3>CONTENT</h3>
+        </li>
+        <li><a href="#"><span class="icon icwri"></span><span class="desktopOnly">Write</span></a></li>
+        <li><a href="#"><span class="icon icwik"></span><span class="desktopOnly">Wiki</span></a></li>
+        <li><a href="#"><span class="icon icsho"></span><span class="desktopOnly">Show</span></a></li>
+        <li class="desktopOnly">
+          <h3>OVERVIEW</h3>
+        </li>
+        <li><a href="#"><span class="icon icmai"></span><span class="desktopOnly">Main Settings</span></a></li>
+        <li><a href="#"><span class="icon iccon"></span><span class="desktopOnly">Configurations</span></a></li>
+        <li><a href="#"><span class="icon icpeo"></span><span class="desktopOnly">People Directory</span></a></li>
+        <li><a href="#"><span class="icon icadm"></span><span class="desktopOnly">Admin</span></a></li>
+      </ul>
+    </aside>
+    <section class="section hubnetDashboard">
+      <div class="dashboardHeader">
+        <div class="featuredBanner"></div>
+        <div class="breadcrumb">Main Settings > My Calendar</div>
+      </div>
+      <div class="dashboardContents">
+      <div class="pageWidget viewFiles">
+        <div class="whead">
+          <h4>My Calendar</h4>
+        </div>
+        <div class="wbody">
+        	<div class="calendarWrapper">
+        	<div class="calendarLeft">
+            	<h3>Filter By Events<span class="collapse"></span></h3>
+                <div class="accordionContent">
+                <ul>
+                	<li><input type="checkbox" id="showall"><label for="showall">Show All</label></li>
+                    <li><input type="checkbox" id="goals"><label for="goals">Goals</label></li>
+                    <li><input type="checkbox" id="meetings"><label for="meetings">Meetings</label></li>
+                    <li><input type="checkbox" id="appointments"><label for="appointments">Appointments</label></li>
+                </ul>
+                </div>
+                <h3>Filter By Hubs<span class="expand"></span></h3>
+            </div>
+            <div class="calendarRight">
+            	<div class="row">
+                	<div class="calendarControls">
+                    	<a href="#"><span class="addIcon"></span> Create a Goal</a>
+                        <a href="#"><span class="addIcon"></span> Add an appointment</a>
+                    </div>
+                </div>
+            	<div id="calendar"></div>	
+            </div>
+            </div>
+        <!-- .//wbody -->
+      </div>
+      </div>
+      </div>
+      <!-- /. dashboard contents --> 
+    </section>
+  </div>
+</div>
+<div class="overlay"></div>
+<div class="popup c-viewappointment popupwrap">
+	
+    <div class="row">
+    	<h2>View Appointment</h2><div class="controlBox pull-right"><a class="btnDelete" href="#">Delete</a><a class="btnEdit" href="#">Edit</a></div>
+    </div>
+    <!-- placed the close button after first "row" in order to get the .row:first-child property -->
+    <a href="#" class="close"><img src="images/icon-close.png" width="15" height="15" alt="close"></a>
+    <div class="row">
+    	<div class="laside"><strong>Hub</strong></div>
+        <div class="raside">A-Team</div>
+    </div>
+    <div class="row">
+    	<div class="laside"><strong>Share With</strong></div>
+        <div class="raside"><a href="#" class="tag">Maria</a><a href="#" class="tag">Binoy</a></div>
+    </div>
+    <div class="row">
+    	<div class="laside"><strong>Subject</strong></div>
+        <div class="raside">Meeting</div>
+    </div>
+    <div class="row">
+    	<div class="laside"><strong>Location</strong></div>
+        <div class="raside">Office</div>
+    </div>
+    <div class="row">
+    	<div class="laside"><strong>Start Time</strong></div>
+        <div class="raside">July 21, 2014  1:00 PM</div>
+    </div>
+    <div class="row">
+    	<div class="laside"><strong>End Time</strong></div>
+        <div class="raside">July 21, 2014  2:00 PM</div>
+    </div>
+    <div class="row">
+    	<div class="laside"><strong>Message</strong></div>
+        <div class="raside"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin quis feugiat felis, a dignissim tortor. Nulla sit amet urna tortor. Nulla non interdum tellus. Maecenas dapibus scelerisque sapien at ullamcorper. </p></div>
+    </div>
+     
+</div><!-- close //popup c-viewappointment popupwrap // -->
+
+<script src='lib/moment.min.js'></script>
+<script src='lib/jquery.min.js'></script>
+<script src='fullcalendar.js'></script>
+<script>
+
+	$(document).ready(function() {
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			defaultDate: '2014-09-12',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: 'All Day Event',
+					start: '2014-09-01'
+				},
+				{
+					title: 'Long Event',
+					start: '2014-09-07',
+					end: '2014-09-10'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2014-09-09T16:00:00'
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2014-09-16T16:00:00'
+				},
+				{
+					title: 'Conference',
+					start: '2014-09-11',
+					end: '2014-09-13'
+				},
+				{
+					title: 'Meeting',
+					start: '2014-09-12T10:30:00',
+					end: '2014-09-12T12:30:00'
+				},
+				{
+					title: 'Lunch',
+					start: '2014-09-12T12:00:00'
+				},
+				{
+					title: 'Meeting',
+					start: '2014-09-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2014-09-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2014-09-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2014-09-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2014-09-28'
+				}
+			]
+		});
+		
+	});
+
+</script>
+</body>
+</html>
