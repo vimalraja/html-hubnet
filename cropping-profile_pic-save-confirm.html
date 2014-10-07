@@ -74,33 +74,37 @@
                     <li><a href="#" class="btnCaptureBig">Capture</a></li>
                 </ul>
                 <div class="cropArea">
-           	    	<img src="images/temp-crop.png" alt="temp holder">
+                    <img src="images/temp-crop.png" alt="temp holder">
                 </div>
             </div>
             <div class="cropRight">
             	<ul class="croppedPictures">
-                	<li class="first odd"><div class="imgHolder"><img src="images/img-profilepic_holder.png" alt="Current Profile Picture"></div></li>
-                    <li class="second">
+                	<li>
+                    	<div class="saveProfilePicBorder"><img src="images/img-profilepic_holder-save.png" alt="Cropped Profile Picture"></div>
+                    	<div class="imgHolder"><img src="images/img-profilepic-save.png" alt="profilepic save"></div>
+                        <div class="selectProfilePic"><a href="#" class="useOnProfile">Use on Profile</a><a class="saveProfilePic" href="#">Save</a></div>
+                    </li>
+                    <li class="even">
                     	<a href="#" class="close"><img src="images/icon-close.png" alt="close"></a>
                         <div class="imgHolder"><img src="images/img-profilepic-crop01.jpg" alt="picture01"></div>
                         <div class="selectProfilePic"><a href="#" class="useOnProfile">Use on Profile</a></div>
                     </li>
-                    <li class="third odd">
+                    <li>
                     	<a href="#" class="close"><img src="images/icon-close.png" alt="close"></a>
                         <div class="imgHolder"><img src="images/img-profilepic-crop02.jpg" alt="picture02"></div>
                         <div class="selectProfilePic"><a href="#" class="useOnProfile">Use on Profile</a></div>
                     </li>
-                    <li class="first">
+                    <li class="even">
                     	<a href="#" class="close"><img src="images/icon-close.png" alt="close"></a>
                         <div class="imgHolder"><img src="images/img-profilepic-crop03.jpg" alt="picture03"></div>
                         <div class="selectProfilePic"><a href="#" class="useOnProfile">Use on Profile</a></div>
                     </li>
-                    <li class="second odd">
+                    <li>
                     	<a href="#" class="close"><img src="images/icon-close.png" alt="close"></a>
                         <div class="imgHolder"><img src="images/img-profilepic-crop04.jpg" alt="picture04"></div>
                         <div class="selectProfilePic"><a href="#" class="useOnProfile">Use on Profile</a></div>
                     </li>
-                    <li class="third">
+                    <li class="even">
                     	<a href="#" class="close"><img src="images/icon-close.png" alt="close"></a>
                         <div class="imgHolder"><img src="images/img-profilepic-crop05.jpg" alt="picture05"></div>
                         <div class="selectProfilePic"><a href="#" class="useOnProfile">Use on Profile</a></div>
@@ -115,6 +119,16 @@
       <!-- /. dashboard contents --> 
     </section>
   </div>
+</div>
+<div class="overlay"></div>
+<div class="popup confirmSave">
+<!-- placed the close button after first "row" in order to get the .row:first-child property -->
+<a href="#" class="close"><img src="images/icon-close.png" width="15" height="15" alt="close"></a>
+<h2>Confirm New Profile Image</h2>
+<p>This photo will now be your new profile image in hubnet?</p>
+<div class="btnHolder">
+<a class="btnBlue" href="#">Save</a><a href="#" class="btnCancel">Cancel</a>
+</div>
 </div>
 </body>
 </html>

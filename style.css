@@ -1360,6 +1360,10 @@ ul ul, ol ul, ul ol, ol ol {
 	text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.2);
 	margin-right:10px;
 }
+.btnBlue:hover{
+	color:#fff;
+	text-decoration:none;
+}
 .btnGrey{
 	background:#AAAAAA;
 	padding:2px 10px 3px;
@@ -2771,15 +2775,6 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 .c-addanappointment .nameLookupDropdown{
 	margin:-6px 0 0 0;	
 }
-.cropWrapper{
-	padding-top:20px;
-}
-.cropLeft{
-	background:#ccc;
-	display:table-cell;
-	min-width:378px;
-	padding:30px;
-}
 
 .userAddress.fleft, .textAddress.fright{
 	display:table-cell;
@@ -2794,3 +2789,172 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 .columnleft{
 	padding-right:10px;
 }
+
+.cropWrapper{
+	padding-top:20px;
+}
+.cropLeft{
+	display:table-cell;
+	min-width:378px;
+	padding:30px;
+	vertical-align:top;
+}
+.cropRight{
+	display:table-cell;
+	width:100%;
+	padding:30px 0;
+	vertical-align:top;
+	background-color:#EEEEEE;
+}
+.cropButtons, .croppedPictures{
+	clear:both;
+	margin:0; 
+	padding:0;
+}
+.cropButtons li{
+	list-style:none;
+	width:49%;
+	border-right:1px solid #EEEEEE;
+	display:inline-block;
+	text-align:center;
+}
+.cropButtons li:last-child{
+	border:none;
+}
+.cropButtons li a{
+	font-size:16px;
+	font-weight:bold;
+	color:#365F91;
+	display:block;
+	padding-top:65px;
+}
+.cropButtons li a.btnUploadBig{
+	background:url(images/icon-upload_big.png) no-repeat center top;
+}
+.cropButtons li a.btnCaptureBig{
+	background:url(images/icon-capture_big.png) no-repeat center top;
+}
+.cropArea{
+	padding-top:20px;
+}
+.croppedPictures{
+	margin:0 auto;
+	overflow:auto;
+	max-width:356px;
+}
+
+.croppedPictures li{
+	list-style:none;
+	position:relative;
+	float:left;
+	max-width:145px;
+	min-width:145px;
+	margin:30px 0 ;
+	margin-bottom:0;
+	margin-left:65px;
+}
+.croppedPictures li.odd{
+	margin-left:0;
+}
+@media (max-width: 1200px){
+	.croppedPictures{
+		width:145px;
+	}
+	.croppedPictures li{
+		clear:both;
+		float:none;
+		overflow:auto;
+		margin:30px 0;
+	}
+	.croppedPictures li .imgHolder{
+		float:none;
+		margin:0 auto;
+	}
+	
+}
+@media (min-width: 1380px){
+	.croppedPictures{
+		max-width:567px;
+	}
+	.croppedPictures li.first, .croppedPictures li.first.odd{
+		margin-left:0;
+	}
+	.croppedPictures li.odd{
+	margin-left:65px;
+	}
+}
+.croppedPictures li .close{
+	top:0;
+	right:0;
+	width:25px;
+	height:25px;
+	background:rgba(255,255,255,0.5);
+}
+.croppedPictures li .close:hover{
+	background:#fff;
+}
+.croppedPictures li .close img{
+	vertical-align:middle;
+	margin-left:4px;
+	margin-top:1px;
+}
+.croppedPictures li .imgHolder{
+	display:block;
+	float:left;
+}
+.croppedPictures li .imgHolder img{
+	display:block;
+	max-width:145px;
+	max-height:145px;
+	}
+.croppedPictures li .selectProfilePic{
+	display:block;
+	background:#365F91 url(images/bg-cropImg.png) no-repeat 70% top;
+	float:left;
+	width:100%;
+	padding:3px 7px;
+}
+.useOnProfile, .saveProfilePic{
+	color:#fff;
+	font-size:12px;
+	float:left;
+}
+.saveProfilePic{
+	float:right;
+}
+.useOnProfile:hover, .saveProfilePic:hover{
+	color:#fff;
+}
+.saveProfilePicBorder{
+	position:absolute;
+	top:0;
+	left:0;
+}
+.popup.confirmSave h2{
+	margin-top:0;
+	margin-bottom:10px;
+}
+.popup .btnHolder{
+	padding-top:25px;
+}
+.captureArea{
+	max-width:480px;
+}
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+*:before, *:after {
+    box-sizing: border-box;
+}
+.popup.confirmSave, .popup.savePicture{
+	width:505px;
+}
+.savePicture h2{
+	margin-top:0;
+}
+.popup.capturePop{
+	width:580px;
+	padding:40px 50px;
+}
+	
