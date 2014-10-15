@@ -3076,6 +3076,7 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 	border-right:1px solid #EEEEEE;
 	border-bottom:1px solid #EEEEEE;
 	padding:23px 0 0 0;
+	position:relative;
 }
 .systemWidgets h3{
 	margin:0;
@@ -3127,9 +3128,15 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 .btnDeactivate{
 	background:url(images/icon-radio.png) no-repeat left bottom;
 }
+
 .addtoDashboard span{
 	margin-right:40px;
 	display:inline-block;
+}
+@media (max-width:1240px){
+.addtoDashboard span{
+	font-size:11px;
+}
 }
 .td, .th{
 	display:table-cell;
