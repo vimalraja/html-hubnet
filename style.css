@@ -722,6 +722,7 @@ ul ul, ol ul, ul ol, ol ol {
 	padding-top:20%;
 	background: url(images/featured_banner.png) no-repeat left top;
 	background-size: 100% 100%;
+	position:relative;
 }
 .bannerImageWrap{
 	padding:10px;
@@ -3168,4 +3169,85 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 .ha-btn{
 	min-width:100px;
 	text-align:center;
+}
+.titleWrap{
+	padding:13px 20px 0 20px;
+}
+.titleWrap h2, .titleWrap .pageControl{
+	float:left;
+	margin:0;
+	padding:0 20px;
+}
+.titleWrap h2{
+	color:#355F91;
+	font-size:21px;
+	font-weight:normal;
+}
+.bodyWrap.greyBox{
+	padding-top:20px;
+}
+.slideTrim{
+	position:relative;
+	width:100%;
+	overflow:hidden;
+}
+.slideWrap{
+	overflow-x:auto;
+}
+.slides{
+	position:relative;
+	width:300em;
+	margin:0;
+	padding:0;
+}
+.slides a img, .slides a{
+	border:none;
+	float:left;
+	display:block;
+	overflow:hidden;
+}
+.slides a:hover, .slides a.active{
+	border:5px solid #FF5C26;
+}
+.slides a:hover img,  .slides a.active img{
+	margin:-5px;
+}
+.bodyWrap li{
+	list-style:none;
+	float:left;
+	width:240px;
+	margin-left:20px;
+}
+.bodyWrap li:first-child{
+	margin-left:0;
+}
+.featuredBanner.changed{
+	background:url(images/featured_banner2.jpg) no-repeat left top;
+}
+.addLocation{
+	position:absolute;
+	z-index:100;
+	width:570px;
+	height:270px;
+	top:0;
+	padding:5px;
+	right:0;
+}
+.addLocation.greyBox{
+	border-radius:0;
+}
+.addLocation .row{
+	border:none;
+}
+.addLocation h2{
+	color:#355F91;
+	font-weight:normal;
+	font-size:21px;
+	padding:0 20px;
+	margin-bottom:5px;
+}
+.addLocation label{
+	display:block;
+	font-size:16px;
+	font-weight:bold;
 }
