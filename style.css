@@ -3,10 +3,18 @@ html {
 	font-family: sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	height:100%;
 }
 body {
 	margin: 0;
 	position:relative;
+}
+body.login{
+	background:#EEEEEE;
+	height:100%;
+}
+body.login .page{
+	height:100%;
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
 	display: block;
@@ -546,7 +554,7 @@ ul ul, ol ul, ul ol, ol ol {
 
 /* SIDEBAR */
 .desktopOnly {
-	display: none;
+	display: none !important;
 }
 .containerfluid {
 	background-color: #fff;
@@ -592,12 +600,12 @@ ul ul, ol ul, ul ol, ol ol {
 	display: block;
 	padding-left: 15px;
 }
-.menu li > a {
+.menu > li > a {
 	color: #fff;
 	text-decoration: none;
 	background: #365F91;
 }
-.menu .icon {
+.menu .icon, .submenu .icon {
 	display: inline-block;
 	height: 23px;
 	vertical-align: middle;
@@ -606,100 +614,74 @@ ul ul, ol ul, ul ol, ol ol {
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
-.menu li > a:hover {
-	background: #fff;
-	color: #545454;
+.submenu{
+	padding:0;
 }
-.menu .icove {
+.submenu .icon {
+	background-image: url(images/icons-sidebar-submenu.png);
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.menu > li.active > a:before, .menu > li.hasDropdown.open > a:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	min-height: 50px;
+	width: 10px;
+	background: #FF4000;
+}
+.menu li.hasDropdown > a{
+	background: #365F91 url(images/icon-menu-expand.png) no-repeat 90% -18px;
+}
+.menu li.hasDropdown.open > a{
+	background: #365F91 url(images/icon-menu-collapse.png) no-repeat 90% -18px;
+}
+.menu .icsys {
 	background-position: -40px 0;
 }
-.menu a:hover .icove {
-	background-position: 0 0;
-}
-.menu .icnot {
+.menu .ichub {
 	background-position: -40px -42px;
 }
-.menu a:hover .icnot {
-	background-position: 0 -42px;
-}
-.menu .icmes {
+.menu .icmyc {
 	background-position: -40px -84px;
 }
-.menu a:hover .icmes {
-	background-position: 0 -84px;
-}
-.menu .icmes {
-	background-position: -40px -84px;
-}
-.menu a:hover .icmes {
-	background-position: 0 -84px;
-}
-.menu .ictas {
+.menu .iccrea {
 	background-position: -40px -126px;
 }
-.menu a:hover .ictas {
-	background-position: 0 -126px;
-}
-.menu .icsta {
+.menu .icmyh {
 	background-position: -40px -168px;
 }
-.menu a:hover .icsta {
-	background-position: 0 -168px;
-}
-.menu .icsal {
+.menu .ichubd {
 	background-position: -40px -210px;
 }
-.menu a:hover .icsal {
-	background-position: 0 -210px;
-}
-.menu .icwri {
+.menu .icpeo {
 	background-position: -40px -252px;
 }
-.menu a:hover .icwri {
-	background-position: 0 -252px;
-}
-.menu .icwik {
+.menu .iccre {
 	background-position: -40px -294px;
 }
-.menu a:hover .icwik {
-	background-position: 0 -294px;
-}
-.menu .icsho {
+.menu .icupl {
 	background-position: -40px -336px;
 }
-.menu a:hover .icsho {
-	background-position: 0 -336px;
-}
-.menu .iceve {
+.menu .icapp {
 	background-position: -40px -378px;
 }
-.menu a:hover .iceve {
-	background-position: 0 -378px;
-}
-.menu .icmai {
+.menu .icobs {
 	background-position: -40px -420px;
 }
-.menu a:hover .icmai {
-	background-position: 0 -420px;
-}
-.menu .iccon {
+.menu .icann {
 	background-position: -40px -462px;
 }
-.menu a:hover .iccon {
-	background-position: 0 -462px;
-}
-.menu .icpeo {
+.menu .icuse {
 	background-position: -40px -504px;
 }
-.menu a:hover .icpeo {
-	background-position: 0 -504px;
-}
-.menu .icadm {
+.menu .icrol {
 	background-position: -40px -546px;
 }
-.menu a:hover .icadm {
-	background-position: 0 -546px;
+.menu .iccat{
+	background-position: -40px -588px;
 }
+
 .menu li .unreadAlerts {
 	position: absolute;
 	z-index: 1;
@@ -713,26 +695,48 @@ ul ul, ol ul, ul ol, ol ol {
 	right: 0;
 	top: 10px;
 }
+.submenu .icwiki {
+	background-position: 0 0;
+}
+.submenu .icdoc {
+	background-position: 0 -42px;
+}
+.submenu .icspr {
+	background-position: 0 -84px;
+}
+.submenu .icpre {
+	background-position: 0 -126px;
+}
 /*  RIGHT SIDE CONTENTS */
 .hubnetDashboard {
 	margin-left: 60px;
 }
 .featuredBanner {
 	width: 100%;
-	padding-top:20%;
-	background: url(images/featured_banner.png) no-repeat left top;
-	background-size: 100% 100%;
 	position:relative;
+	display:table;
+	background-image:url(images/featured_banner.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	height:261px;
+	background-size:100% auto;
+}
+.featuredBanner.changed{
+	background-image:url(images/1.png);
 }
 .bannerImageWrap{
 	padding:10px;
-	margin-top:-20%;
-	float:left;
+	position:absolute;
+	left:10px;
+	top:10px;
+	z-index:5;
 }
 .bannerLocationWrap{
 	padding:25px 50px;
-	float:right;
-	margin-top:-20%;
+	position:absolute;
+	top:10px;
+	right:20px;
+	z-index:6;
 }
 .bannerLocations{
 	margin:0;
@@ -2341,7 +2345,7 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 	border-right: 1px solid #eee;
 }
 .desktopOnly {
-	display: inline-block;
+	display: inline-block !important;
 }
 .menu li {
 	border-top: 1px solid #F3F3F3;
@@ -2375,11 +2379,11 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 	padding-right: 36px;
 	vertical-align: middle;
 }
-.menu li > a:hover, .menu li.active > a {
+.menu > li > a:hover, .menu > li.active > a {
 	background: #365F91;
 	color: #fff;
 }
-.menu li > a:hover:before, .menu li.active > a:before {
+.menu > li > a:hover:before, .menu > li.active > a:before, .menu > li.hasDropdown.open > a:before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -2387,90 +2391,145 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 	width: 10px;
 	background: #FF4000;
 }
-.menu .icove {
+.submenu{
+	padding:0;
+}
+.submenu li a{
+	background-color:#F3F3F3;
+	color:#545454;
+}
+.submenu > li > a:hover, .submenu > li.active > a {
+	background: #636363;
+	color: #fff;
+}
+.menu li.hasDropdown > a{
+	background: url(images/icon-menu-expand.png) no-repeat 90% 24px;
+}
+.menu li.hasDropdown > a:hover{
+	background: #365F91 url(images/icon-menu-expand.png) no-repeat 90% -18px;
+}
+.menu li.hasDropdown.open > a{
+	background: #365F91 url(images/icon-menu-collapse.png) no-repeat 90% -18px;
+	color:#fff;
+}
+.menu .icsys {
 	background-position: 0 0;
 }
-.menu a:hover .icove, .menu li.active a .icove {
+.menu a:hover .icsys, .menu li.active a .icsys {
 	background-position: -40px 0;
 }
-.menu .icnot {
-	background-position: 0 -38px;
+.menu .ichub {
+	background-position: 0 -42px;
 }
-.menu a:hover .icnot, .menu li.active a .icnot {
-	background-position: -40px -38px;
+.menu a:hover .ichub, .menu li.active a .ichub {
+	background-position: -40px -42px;
 }
-.menu .icmes {
+.menu .icmyc {
 	background-position: 0 -82px;
 }
-.menu a:hover .icmes, .menu li.active a .icmes {
+.menu a:hover .icmyc, .menu li.active a .icmyc {
 	background-position: -40px -82px;
 }
-.menu .ictas {
+.menu .iccrea {
 	background-position: 0 -126px;
 }
-.menu a:hover .ictas, .menu li.active a .ictas {
+.menu a:hover .iccrea, .menu li.active a .iccrea {
 	background-position: -40px -126px;
 }
-.menu .icsta {
+.menu .icmyh {
 	background-position: 0 -168px;
 }
-.menu a:hover .icsta, .menu li.active a .icsta {
+.menu a:hover .icmyh, .menu li.active a .icmyh {
 	background-position: -40px -168px;
 }
-.menu .icsal {
+.menu .ichubd {
 	background-position: 0 -210px;
 }
-.menu a:hover .icsal, .menu li.active a .icsal {
+.menu a:hover .ichubd, .menu li.active a .ichubd {
 	background-position: -40px -210px;
 }
-.menu .icwri {
+.menu .icpeo {
 	background-position: 0 -252px;
 }
-.menu a:hover .icwri, .menu li.active a .icwri {
+.menu a:hover .icpeo, .menu li.active a .icpeo {
 	background-position: -40px -252px;
 }
-.menu .icwik {
+.menu .iccre {
 	background-position: 0 -294px;
 }
-.menu a:hover .icwik, .menu li.active a .icwik {
+.menu a:hover .iccre, .menu li.hasDropdown.open > a .iccre{
 	background-position: -40px -294px;
 }
-.menu .icsho {
+.menu .icupl {
 	background-position: 0 -336px;
 }
-.menu a:hover .icsho, .menu li.active a .icsho {
+.menu a:hover .icupl, .menu li.active a .icupl {
 	background-position: -40px -336px;
 }
-.menu .iceve {
+.menu .icapp {
 	background-position: 0 -378px;
 }
-.menu a:hover .iceve, .menu li.active a .iceve {
+.menu a:hover .icapp, .menu li.active a .icapp {
 	background-position: -40px -378px;
 }
-.menu .icmai {
+.menu .icobs {
 	background-position: 0 -420px;
 }
-.menu a:hover .icmai, .menu li.active a .icmai {
+.menu a:hover .icobs, .menu li.active a .icobs {
 	background-position: -40px -420px;
 }
-.menu .iccon {
+.menu .icann {
 	background-position: 0 -462px;
 }
-.menu a:hover .iccon, .menu li.active a .iccon {
+.menu a:hover .icann, .menu li.active a .icann {
 	background-position: -40px -462px;
 }
-.menu .icpeo {
+.menu .icuse {
 	background-position: 0 -504px;
 }
-.menu a:hover .icpeo, .menu li.active a .icpeo {
+.menu a:hover .icuse, .menu li.active a .icuse {
 	background-position: -40px -504px;
 }
-.menu .icadm {
+.menu .icrol {
 	background-position: 0 -546px;
 }
-.menu a:hover .icadm, .menu li.active a .icadm {
+.menu a:hover .icrol, .menu li.active a .icrol {
 	background-position: -40px -546px;
 }
+.menu .iccat {
+	background-position: 0 -588px;
+}
+.menu a:hover .iccat, .menu li.active a .iccat {
+	background-position: -40px -588px;
+}
+.submenu .icbranch{
+	background:url(images/icon-submenu-branch.png) no-repeat center center;
+}
+.submenu .icwiki {
+	background-position: 0 0;
+}
+.submenu a:hover .icwiki, .submenu li.active a .icwiki {
+	background-position: -40px 0;
+}
+.submenu .icdoc {
+	background-position: 0 -42px;
+}
+.submenu a:hover .icdoc, .submenu li.active a .icdoc {
+	background-position: -40px -42px;
+}
+.submenu .icspr {
+	background-position: 0 -84px;
+}
+.submenu a:hover .icspr, .submenu li.active a .icspr {
+	background-position: -40px -84px;
+}
+.submenu .icpre {
+	background-position: 0 -126px;
+}
+.submenu a:hover .icpre, .submenu li.active a .icpre {
+	background-position: -40px -126px;
+}
+
 /* MAIN PAGE*/
 .hubnetDashboard {
 	margin-left: 260px;
@@ -3228,17 +3287,11 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 .bodyWrap li:first-child{
 	margin-left:0;
 }
-.featuredBanner.changed{
-	background:url(images/featured_banner2.jpg) no-repeat left top;
-}
 .addLocation{
-	position:absolute;
 	z-index:100;
-	width:570px;
-	height:270px;
-	top:0;
+	position:relative;
+	display:table-cell;
 	padding:5px;
-	right:0;
 }
 .addLocation.greyBox{
 	border-radius:0;
@@ -3257,4 +3310,112 @@ h3 .recordControls .editAction:hover, h3 .recordControls .switchAction:hover, h3
 	display:block;
 	font-size:16px;
 	font-weight:bold;
+}
+.addLocation .timezone{
+	width:100%;
+	display:block;
+	padding:3px 0;
+}
+.addLocation .selectLocation{
+	width:50%;
+	padding:3px 0;
+}
+.addLocation .btnBlue, .addLocation .btnGrey {
+	font-size:15px;
+}
+.loginWrap{
+	width:400px;
+	position:absolute;
+	left:50%;
+	top:17%;
+	background:#fff;
+	margin:0 auto;
+	padding-bottom:30px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow:    0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+	box-shadow:         0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+	margin-left:-200px;
+}
+.loginWrap .header{
+	text-align:center;
+	border-bottom:1px solid #F3F3F3;
+	padding:20px 0 10px 0;
+}
+.loginWrap h2{
+	font-weight:normal;
+	color:#355F91;
+	font-size:21px;
+	margin:30px 0 0 0;
+	text-align:center;
+}
+.loginWrap h2.green{
+	color:#218C00;
+}
+.loginWrap label{
+	padding-bottom:5px;
+	display:block;
+}
+.loginWrap input[type="text"], .loginWrap textarea, .loginWrap input[type="password"]{
+	border:1px solid #CCCCCC;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding:6px;
+	width:100%;
+}
+.loginWrap .row{
+	border-bottom:none;
+	padding-bottom:4px;
+}
+.loginWrap input{
+	vertical-align:middle;
+}
+.loginWrap .btnBlue{
+	width:100%;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+	padding:6px 0;
+	margin:0;
+}
+.loginWrap .btnBlue:hover{
+	background:#FF5C26;
+	color:#fff;
+}
+.forgotPassword a{
+	color:#345F91;
+	font-size:13px;
+}
+.loginWrap .bullet:after{
+	padding:4px;
+}
+.loginWrap p{
+	margin:0;
+}
+.popup.invalidEmail{
+	width:500px;
+	top:25%;
+	margin-left:-250px
+}
+.md-modal {
+	top:35%;
+}
+.md-content{
+	background:none;
+	color:#535353;
+	border-radius:0;
+}
+.md-content > div{
+	padding:0;
+	padding-bottom:15px;
+}
+.md-content button{
+	margin:0;
+	display:inline-block;
+}
+.md-overlay {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
 }
